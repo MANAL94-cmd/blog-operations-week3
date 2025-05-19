@@ -1,0 +1,17 @@
+body {
+    background-color: #fdfdfd;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.profile-container {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}

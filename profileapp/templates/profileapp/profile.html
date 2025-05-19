@@ -1,0 +1,42 @@
+{% extends 'profileapp/base.html' %}
+{% load static %}
+
+{% block title %}Minha Manal - Profile{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-10">
+        <div class="row shadow-lg rounded profile-container p-4">
+            <!-- Left column (Image + Basic Info) -->
+            <div class="col-md-4 text-center bg-warning text-white rounded-start py-4">
+                <img src="{% static 'images/Manal_Photo.png' %}" alt="Profile Photo" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                <h3 class="mb-0">Minha Manal</h3>
+                <p class="fst-italic">AI/ML Enthusiast</p>
+                <p>Bangalore</p>
+                <a href="mailto:minhamanal@gmail.com" class="btn btn-light mt-3">Contact Me</a>
+            </div>
+
+            <!-- Right column (Details) -->
+            <div class="col-md-8 bg-white text-dark rounded-end py-4 px-5">
+                <h4 class="mb-3">About Me</h4>
+                <p>I’m an aspiring AI/ML developer with strong Python and web development skills. I enjoy working on data-centric applications, building full-stack web apps, and learning new technologies.</p>
+                
+                <h4 class="mt-4 mb-3">Skills</h4>
+                <div class="d-flex flex-wrap">
+                    <span class="badge bg-warning text-dark m-1">Python</span>
+                    <span class="badge bg-warning text-dark m-1">HTML</span>
+                    <span class="badge bg-warning text-dark m-1">CSS</span>
+                    <span class="badge bg-warning text-dark m-1">JavaScript</span>
+                    <span class="badge bg-warning text-dark m-1">Django</span>
+                    <span class="badge bg-warning text-dark m-1">Machine Learning</span>
+                </div>
+
+                <h4 class="mt-4 mb-3">Find Me Online</h4>
+                <a href="https://www.linkedin.com/in/manalk/" class="btn btn-outline-warning btn-sm me-2" target="_blank">LinkedIn</a>
+                <a href="https://github.com/MANAL94-cmd" class="btn btn-outline-dark btn-sm me-2" target="_blank">GitHub</a>
+                <a href="https://www.facebook.com/minha.manal.5/" class="btn btn-outline-primary btn-sm" target="_blank">Facebook</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

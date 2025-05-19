@@ -1,0 +1,15 @@
+{% extends "profileapp/base.html" %}
+
+
+{% block content %}
+  <h1>Blog Posts</h1>
+  {% for post in posts %}
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <p class="card-text">{{ post.content|truncatewords:30 }}</p>
+        <a href="{% url 'post_detail' id=post.id %}" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}
