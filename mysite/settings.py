@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "django.contrib.staticfiles",
+    "django.contrib.staticfiles",  # Only one entry here
     "profileapp",
 ]
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -116,14 +117,17 @@ USE_I18N = True
 USE_TZ = True
 
 
-## Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
-
+# Static files (CSS, JavaScript, images)
 STATIC_URL = 'static/'
 
+# Specify where additional static files are stored (outside the default 'static' folder)
 STATICFILES_DIRS = [
-    BASE_DIR / "profileapp" / "static",  # ✅ Only include existing folder
+    BASE_DIR / "profileapp" / "static",  # Points to profileapp/static
 ]
+
+# Static files will be collected here for production use
+STATIC_ROOT = BASE_DIR / "staticfiles"  # Collect static files using collectstatic
+
 
 # ✅ Add this below:
 MEDIA_URL = '/media/'

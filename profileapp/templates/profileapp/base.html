@@ -2,18 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% block title %}My Site{% endblock %}</title>
+  <title>{% block title %}My Blog{% endblock %}</title>
+
+  <!-- ✅ Meta Tags for SEO and Mobile -->
+  <meta name="description" content="Personal blog showcasing CRUD operations using Django.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  {% load static %}
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="{% static 'profileapp/images/favicon.ico' %}">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Load static files -->
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'profileapp/style.css' %}" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'profileapp/styles.css' %}" />
 </head>
 
-<body>
+<body class="bg-light text-dark">
   <!-- Navbar -->
   {% include 'profileapp/navbar.html' %}
 
