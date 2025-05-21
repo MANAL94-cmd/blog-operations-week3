@@ -11,4 +11,31 @@ __pycache__/
 .env
 *.bak
 db.sqlite3
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3
+
+# Environment
+.env
+env/
+venv/
+
+# Media files
+/media/
+media/
+
+# VS Code
+.vscode/
+
+# Mac OS
+.DS_Store
 
